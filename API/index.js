@@ -6,7 +6,7 @@ import cors from 'cors';
 
 //Initialisation d'express et des middlewares
 const app = express();
-const PORT = process.env.database_PORT || 3001;
+const PORT = process.env.PORT || 3001;
 
 // On autorise seulement le front à appeler l'API
 app.use(cors({origin: process.env.CORS_ORIGIN}));
@@ -15,9 +15,9 @@ app.use(cors({origin: process.env.CORS_ORIGIN}));
 app.use(express.json());
 
 
-// app.get('/', (req, res) => {
-//    res.json({ message: 'API en marche'});
-//}); 
+app.get('/', (req, res) => {
+   res.json({ message: 'API en marche'});
+}); 
 
 // On se connecte à la base, puis on démarre le serveur
 async function demarrer() {
