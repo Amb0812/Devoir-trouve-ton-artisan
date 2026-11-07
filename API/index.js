@@ -4,6 +4,7 @@ import express from 'express';
 import dotenv from 'dotenv/config';
 import cors from 'cors';
 
+
 //Initialisation d'express et des middlewares
 const app = express();
 const PORT = process.env.PORT || 3001;
