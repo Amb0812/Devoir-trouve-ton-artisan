@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { Op } from 'sequelize';
-import { Artisan, Specialite, Categorie } from '../schemas/relation.js';
+import { Artisan, Specialite, Categorie } from '../schemas/relations.js';
 
 const router = Router();
 
@@ -8,12 +8,13 @@ const router = Router();
 const inclureSpecialite = [{ model: Specialite, include: [Categorie] }];
 
 // Liste des 3 artisans du mois 
-// Cette route doit être placée AVANT "/:id", sinon "du-mois" serait lu comme un id
+// Cette route doit être placée AVANT "/:id", sinon "mois" serait lu comme un id
 router.get('/mois', async (req, res) => {
   try {
     const artisans = await Artisan.findAll({
       where: { top: true },
       include: inclureSpecialite,
+      order: [['note', 'DESC']],
       limit: 3,
     });
     res.json(artisans);
@@ -58,5 +59,13 @@ router.get('/:id', async (req, res) => {
     if (!Number.isInteger(id) || id < 1) {
       return res.status(400).json({ message: 'Identifiant incorrect' });
     }
-
+    const artisan = await Artisan.findByPk(id, { include: inclureSpecialite });
+    if (!artisan) {
+      return res.status(404).json({ message: 'Artisan introuvable' });
+    }
+    res.json(artisan);
+  } catch (error) {
+    res.status(500).json({ message: 'Erreur serveur' });
+  }
+});
 export default router;

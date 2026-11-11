@@ -3,7 +3,8 @@ import sequelize from './config/database.js';
 import express from 'express';
 import dotenv from 'dotenv/config';
 import cors from 'cors';
-
+import categorieRoute from './routes/rtcategorie.js';
+import artisanRoute from './routes/rtartisan.js';
 
 //Initialisation d'express et des middlewares
 const app = express();
@@ -15,6 +16,9 @@ app.use(cors({origin: process.env.CORS_ORIGIN}));
 // Va permettre de lire le JSON envoyé dans les requêtes
 app.use(express.json());
 
+// Brancher les routes
+app.use('/api/categories', categorieRoute);
+app.use('/api/artisans', artisanRoute);
 
 app.get('/', (req, res) => {
    res.json({ message: 'API en marche'});
