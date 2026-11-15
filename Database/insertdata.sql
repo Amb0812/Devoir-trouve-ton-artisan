@@ -5,7 +5,7 @@ INSERT INTO categorie (id_categorie, nom) VALUES
 (3,'Fabrication'),
 (4,'Services');
 
---Insertion des données dans specialite
+-- Insertion des données dans specialite
 INSERT INTO specialite (id_specialite, nom, id_categorie) VALUES
 (1, 'Boucher', 1),
 (2,'Boulanger',1),
@@ -23,7 +23,7 @@ INSERT INTO specialite (id_specialite, nom, id_categorie) VALUES
 (14,'Toiletteur',4),
 (15,'Webdesign',4);
 
---Insertion des données dans artisan
+-- Insertion des données dans artisan
 INSERT INTO artisan (id_artisan, nom, note, ville, a_propos, email, site_web, top, id_specialite) VALUES
 (1, 'Boucherie Dumont', 4.5, 'Lyon', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend ante sem, id volutpat massa fermentum nec. Praesent volutpat scelerisque mauris, quis sollicitudin tellus sollicitudin.', 'boucherie.dumond@gmail.com', NULL, False, 1),
 (2,'Au pain chaud', 4.8, 'Montélimar', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend ante sem, id volutpat massa fermentum nec. Praesent volutpat scelerisque mauris, quis sollicitudin tellus sollicitudin.', 'aupainchaud@hotmail.com', NULL, TRUE, 2),
