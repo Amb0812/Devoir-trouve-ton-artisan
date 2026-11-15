@@ -1,0 +1,79 @@
+// Page d'accueil : bandeau, étapes, artisans du mois
+@use 'variables' as *;
+
+// Bandeau bleu foncé en haut de page
+.bandeau {
+  background-color: $bleu-fonce;
+  color: #fff;
+  padding: 2rem 0;
+
+  h1 {
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: 300;
+    text-transform: uppercase;   // majuscules faites par le style, pas dans le HTML
+
+    @media (min-width: 992px) {
+      font-size: 2rem;
+    }
+  }
+
+  p {
+    margin: 0.5rem 0 0;
+  }
+}
+
+// Titres des sections « étapes » et « artisans du mois »
+.etapes,
+.du-mois {
+  padding-top: 3rem;
+
+  h2 {
+    margin-bottom: 1.5rem;
+    color: $bleu-fonce;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  ol,
+  ul {
+    padding: 0;
+  }
+}
+
+// Les 4 étapes numérotées
+.etapes {
+  ol {
+    counter-reset: etape;       // remet le compteur à 0
+  }
+
+  li {
+    counter-increment: etape;   // +1 à chaque étape
+  }
+
+  // La carte bleu clair est le <p> (le <li> sert de colonne Bootstrap)
+  p {
+    height: 100%;
+    margin: 0;
+    padding: 1.25rem;
+    background-color: $bleu-tres-clair;
+    border-radius: 12px;
+    font-size: 0.9375rem;
+
+    // Le rond bleu avec le numéro
+    &::before {
+      content: counter(etape);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      margin-bottom: 0.75rem;
+      border-radius: 50%;
+      background-color: $bleu;
+      color: #fff;
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+  }
+}

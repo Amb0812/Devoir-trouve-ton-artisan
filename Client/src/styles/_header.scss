@@ -1,0 +1,42 @@
+// En-tête : logo, menu des catégories, recherche
+@use 'variables' as *;
+
+.entete {
+  background-color: $bleu-tres-clair;
+
+  .navbar {
+    min-height: 80px;
+  }
+
+  // Liens du menu (Alimentation, Bâtiment...)
+  .nav-link {
+    margin-right: 1rem;
+    color: $noir;
+    font-weight: 500;
+
+    &:hover,
+    &:focus,
+    &.active {
+      color: $bleu-fonce;
+      font-weight: 700;
+    }
+  }
+
+  // Formulaire de recherche
+  &__recherche {
+    width: 100%;
+
+    @media (min-width: 992px) {
+      width: 280px;
+    }
+  }
+
+  &__champ {
+    border: 1px solid $bleu;
+    border-right: 0;
+    border-radius: 8px 0 0 8px;
+    font-size: 0.875rem;
+  }
+
+  
+}

@@ -1,0 +1,41 @@
+// Pied de page : liens légaux et adresse de Lyon
+@use 'variables' as *;
+
+.pied {
+  margin-top: 4rem;
+  padding: 2rem 0;
+  background-color: $bleu-fonce;
+  color: #fff;
+  font-size: 0.8125rem;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  // Titres « Informations légales » et « Antenne de Lyon »
+  &__titre {
+    margin-bottom: 1rem;
+    font-size: 0.8125rem;
+    font-weight: 700;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  address {
+    margin: 0;
+    font-style: normal;
+    line-height: 1.8;
+  }
+}

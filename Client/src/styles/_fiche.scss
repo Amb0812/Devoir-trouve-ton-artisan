@@ -1,0 +1,69 @@
+// Page fiche d'un artisan
+@use 'variables' as *;
+
+.fiche {
+  padding-top: 3rem;
+
+  figure {
+    margin: 0;
+  }
+
+  h1 {
+    margin-bottom: 0.25rem;
+    color: $bleu-fonce;
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+    color: $bleu-fonce;
+    font-size: 1.75rem;
+    font-weight: 700;
+  }
+
+  &__image {
+    width: 100%;
+    height: 260px;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    background-color: $bleu-tres-clair;
+    object-fit: cover;
+  }
+
+  &__specialite {
+    margin: 0.5rem 0 0;
+    font-size: 1.125rem;
+  }
+
+  &__ville {
+    margin: 0;
+    font-size: 0.875rem;
+  }
+
+  &__site {
+    color: $bleu;
+    font-weight: 700;
+  }
+
+  &__bas {
+    margin-top: 2.5rem;
+  }
+}
+
+// Formulaire de contact
+.contact {
+  padding: 1.5rem;
+  background-color: $bleu-tres-clair;
+  border-radius: 12px;
+
+  .form-label {
+    margin-top: 0.75rem;
+    font-size: 0.8125rem;
+    font-weight: 700;
+  }
+
+  .btn {
+    margin-top: 1rem;
+  }
+}

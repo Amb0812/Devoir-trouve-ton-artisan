@@ -1,0 +1,22 @@
+// Page liste des artisans
+@use 'variables' as *;
+
+.liste {
+  padding-top: 3rem;
+
+  h1 {
+    margin-bottom: 0.25rem;
+    color: $bleu-fonce;
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  &__compteur {
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+  }
+
+  ul {
+    padding: 0;
+  }
+}

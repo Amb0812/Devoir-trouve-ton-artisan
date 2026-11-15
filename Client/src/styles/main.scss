@@ -1,0 +1,18 @@
+@use 'variables' as *;
+@use 'header';
+@use 'footer';
+@use 'accueil';
+@use 'cartes';
+@use 'fiche';
+@use 'pages';
+@use 'liste';
+
+body {
+  font-family: 'Graphik', Arial, sans-serif;
+  color: $noir;
+}
+
+// Largeur du contenu = 1200 px (marges de 120 px sur 1440 px, comme la maquette)
+.container {
+  max-width: 1200px;
+}

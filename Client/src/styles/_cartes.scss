@@ -1,0 +1,60 @@
+// Cartes d'artisans et étoiles de notation
+@use 'variables' as *;
+
+// Une carte d'artisan (c'est un lien vers la fiche)
+.carte {
+  display: block;
+  height: 100%;    // toutes les cartes ont la même hauteur
+  padding: 1.25rem;
+  background-color: $bleu-tres-clair;
+  border: 2px solid $bleu;
+  border-radius: 12px;
+  color: $noir;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 4px 12px rgba(0, 73, 124, 0.25);
+    color: $noir;
+  }
+
+  h3 {
+    margin: 0 0 0.25rem;
+    color: $bleu-fonce;
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  &__specialite {
+    margin-top: 0.5rem !important;
+    font-size: 0.875rem;
+  }
+
+  &__ville {
+    font-size: 0.75rem;
+  }
+    &__lien {
+    margin-top: 0.5rem !important;
+    color: $bleu-fonce;
+    font-size: 0.8125rem;
+    font-weight: 700;
+  }
+}
+
+// Les étoiles et la note
+.etoiles {
+  margin: 0;
+  color: $bleu;
+  letter-spacing: 2px;
+
+  small {
+    margin-left: 0.5rem;
+    color: $noir;
+    font-size: 1rem;
+    letter-spacing: 0;
+  }
+}
