@@ -10,8 +10,8 @@ import artisanRoute from './routes/rtartisan.js';
 const app = express();
 
 // Port et adresse : fournis par l'hébergeur, ou valeurs locales
-const PORT = process.env.ALWAYSDATA_HTTPD_PORT || process.env.PORT || 3001;
-const IP = process.env.ALWAYSDATA_HTTPD_IP || '0.0.0.0';
+const PORT = process.env.PORT || 3001;
+const IP = process.env.IP || '::';
 
 // On autorise seulement le front à appeler l'API
 app.use(cors({ origin: process.env.CORS_ORIGIN }));
