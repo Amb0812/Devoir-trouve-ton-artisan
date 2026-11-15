@@ -1,6 +1,6 @@
-import Categorie from "./categorie";
-import Specialite from "./Specialite";
-import Artisan from "./Artisan";
+import Categorie from "./Categorie.js";
+import Specialite from "./Specialite.js";
+import Artisan from "./Artisan.js";
 
 //Une catégorie contient plusieurs spécialités
 Categorie.hasMany(Specialite, {foreignKey: 'id_categorie'});
