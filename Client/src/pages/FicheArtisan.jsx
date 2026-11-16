@@ -10,6 +10,7 @@ function FicheArtisan() {
   }
 
   return (
+    <main>
     <article className="container fiche">
       <div className="row">
         <div className="col-12 col-md-5">
@@ -65,6 +66,7 @@ function FicheArtisan() {
         </section>
       </div>
     </article>
+    </main>
   )
 }
 

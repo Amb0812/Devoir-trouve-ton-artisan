@@ -5,7 +5,7 @@ function Accueil() {
   const { artisans, erreur } = useAccueil()
 
   return (
-    <>
+    <main>
       <section className="bandeau">
         <div className="container">
           <h1>Trouvez un artisan, dans votre région !</h1>
@@ -34,7 +34,8 @@ function Accueil() {
           ))}
         </ul>
       </section>
-    </>
+    </main>
+    
   )
 }
 
